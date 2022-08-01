@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.block {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    line-break: 0;
+}
+.container {
+    background-color: #fff;
+    line-height: 0;
+    line-break: 0;
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 800px; */
+    width: 800px;
+    border: cyan solid 2px;
+   /* overflow: hidden; */
+   gap: 0;
+}
+
+.mouse-enter {
+    background-color: green;
+}
