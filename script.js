@@ -29,12 +29,12 @@ button.addEventListener('click', function() {
             
             }  
     } else {
-        alert('the number is too big please enter a number that is less than 100')
+        alert('the number is too big please enter a number that is less than 100');
     }
 });
 
 const randomColor = () => {
-  return Math.floor(Math.random() * 250)
+  return Math.floor(Math.random() * 250);
 }
 
 
@@ -63,15 +63,15 @@ resetBtn.addEventListener('click', function() {
     for(let i = 0; i < blocks.length; i++) {
         blocks[i].style.backgroundColor = 'white';
     }
-})
+});
 
-const colorBtn = document.querySelector('#color');
+const colorBtn = document.querySelector('#colors');
 
 
 colorBtn.addEventListener('click', function() {
     document.addEventListener('mouseover', function(e) {
         if( e.target.className == 'block') {
-           e.target.style.backgroundColor = `black`;
-        }
-     })
-})
+            e.target.style.backgroundColor = colorBtn.value; 
+         }
+    })
+});
