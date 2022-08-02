@@ -1,7 +1,7 @@
 let container = document.querySelector('.container');
 
 //Default
-for(let i = 0; i < 256; i++) {
+for(let i = 0; i < 144; i++) {
     let square = document.createElement('div');
     square.classList.add('block');
     square.style.height = '50px';
@@ -24,7 +24,7 @@ button.addEventListener('click', function() {
                 square.classList.add('block');
                 container.appendChild(square);
 
-                let blockSize = Math.floor(Math.sqrt(640000 / (row * row)));
+                let blockSize =Math.sqrt(360000 / (row * row));
                 square.style.height = `${blockSize}px`; 
                 square.style.width = `${blockSize}px`; 
             
