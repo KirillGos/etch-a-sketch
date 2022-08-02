@@ -8,13 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <button class="button">Click</button>
-    <div class="container"></div>
-    <button id="rainbow">rainbow mode</button>
-    <button id="black">Reset </button>
-   
-    <button><input type="color" id="colors">Change Color</button>
+    <div id="main-area">
+        
+          <div class="buttons">
+            
+             <div class="color-select button"> 
+                 <label for="color" id="color-input ">Pick a color:</label>
+                <input type="color" id="color-input" class="color-input">
+            </div>
+           
+            <button class="button">Change the Size</button>
+            <button  class="button" id="rainbow">Rainbow mode</button>
+            <button  class="button" id="black">Reset </button> 
+           
+            
+        </div>
+        <div id="content">
+            <div class="container"></div>
+        </div>
+        
+    </div>
+      
+    
 
     <!-- Scripts -->
     <script src="script.js"></script>

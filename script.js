@@ -15,8 +15,9 @@ for(let i = 0; i < 256; i++) {
 const button = document.querySelector('button');
 
 button.addEventListener('click', function() {
-    let row = prompt('Enter a number of rows per side');
-    if( row < 100) {
+    let row = prompt('Enter a Size between 0 and 100');
+    if (row !== null) {
+         if( row < 100) {
         container.innerText = '';
             for(let i = 0; i < (row * row); i++) {
                 let square = document.createElement('div');
@@ -31,10 +32,14 @@ button.addEventListener('click', function() {
     } else {
         alert('the number is too big please enter a number that is less than 100');
     }
+    } else {
+        alert('Canceled');
+    }
+   
 });
 
 const randomColor = () => {
-  return Math.floor(Math.random() * 250);
+  return (Math.random() * 250);
 }
 
 
@@ -60,12 +65,17 @@ const blocks = document.getElementsByClassName('block');
 const resetBtn = document.querySelector('#black');
 
 resetBtn.addEventListener('click', function() {
+    document.addEventListener('mouseover', function(e) {
+        if( e.target.className == 'block') {
+           e.target.style.backgroundColor = 'black';
+        }
+     });
     for(let i = 0; i < blocks.length; i++) {
         blocks[i].style.backgroundColor = 'white';
     }
 });
 
-const colorBtn = document.querySelector('#colors');
+const colorBtn = document.querySelector('.color-input');
 
 
 colorBtn.addEventListener('click', function() {
